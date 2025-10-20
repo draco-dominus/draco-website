@@ -81,8 +81,8 @@ export default function DracoGPT() {
               overflowY: "auto",
             }}
           >
-            <p>Hello, I'm DracoGPT, your digital guide!</p>
-            <p>Ask me about Draco's journey, work, or current projects.</p>
+            <p>Hello, I&apos;m DracoGPT, your digital guide!</p>
+            <p>Ask me about Draco&apos;s journey, work, or current projects.</p>
           </div>
 
           <div style={{ borderTop: "1px solid #eee", padding: "10px" }}>
