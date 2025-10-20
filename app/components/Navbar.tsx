@@ -4,13 +4,17 @@ import { FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 export default function Navbar() {
   const links = ["about", "projects", "experience", "contact"];
 
+  const socialLinks = {
+    linkedin: "https://linkedin.com/in/draco-dominus",
+    github: "https://github.com/dracodominus",
+    resume: "/resume.pdf",
+  };
+
   return (
-    <nav
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10 text-white"
-    >
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 text-white">
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Left: Name / Logo */}
-        <div className="text-xl font-semibold tracking-tight">
+        <div className="text-lg font-semibold tracking-tight">
           Draco Dominus
         </div>
 
@@ -29,15 +33,15 @@ export default function Navbar() {
 
         {/* Right: Social icons */}
         <div className="flex gap-4 text-xl">
-          <a href="https://linkedin.com/in/draco-dominus/" target="_blank" className="hover:text-cyan-400">
+          <a href={socialLinks.linkedin} target="_blank" className="hover:text-cyan-400 transition">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/draco-dominus" target="_blank" className="hover:text-cyan-400">
+          <a href={socialLinks.github} target="_blank" className="hover:text-cyan-400 transition">
             <FaGithub />
           </a>
-          <a href="/resume.pdf" target="_blank" className="hover:text-cyan-400">
+          <a href={socialLinks.resume} target="_blank" className="hover:text-cyan-400 transition">
             <FaFileAlt />
-            </a>
+          </a>
         </div>
       </div>
     </nav>
