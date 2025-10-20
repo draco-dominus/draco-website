@@ -2,7 +2,7 @@
 import { Link } from "react-scroll";
 
 export default function Navbar() {
-  const links = ["hero", "about", "projects", "experience", "contact"];
+  const links = [ "about", "projects", "experience", "contact"];
 
   return (
     <nav
