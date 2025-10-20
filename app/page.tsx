@@ -10,7 +10,6 @@ export default function HomePage() {
   return (
     <main>
       <Navbar />
-      <Hero />
       <About />
       <Projects />
       <Experience />
