@@ -37,7 +37,7 @@ export default function Navbar() {
           </a>
           <a href="/resume.pdf" target="_blank" className="hover:text-cyan-400">
             <FaFileAlt />
-          </a>
+            </a>
         </div>
       </div>
     </nav>
