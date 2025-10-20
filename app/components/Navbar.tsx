@@ -29,10 +29,10 @@ export default function Navbar() {
 
         {/* Right: Social icons */}
         <div className="flex gap-4 text-xl">
-          <a href="https://linkedin.com/in/draco-dominus" target="_blank" className="hover:text-cyan-400">
+          <a href="https://linkedin.com/in/draco-dominus/" target="_blank" className="hover:text-cyan-400">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/dracodominus" target="_blank" className="hover:text-cyan-400">
+          <a href="https://github.com/draco-dominus" target="_blank" className="hover:text-cyan-400">
             <FaGithub />
           </a>
           <a href="/resume.pdf" target="_blank" className="hover:text-cyan-400">
