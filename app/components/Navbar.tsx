@@ -14,12 +14,12 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 text-white">
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Left: Name / Logo */}
-        <div className="text-lg font-semibold tracking-tight">
+        <div className="text-lg font-semibold tracking-tight text-white hover:text-cyan-400 transition-colors">
           Draco Dominus
         </div>
 
         {/* Center: Nav links */}
-        <div className="flex gap-8 text-sm">
+        <div className="hidden md:flex gap-8 text-sm">
           {links.map((link) => (
             <a
               key={link}
@@ -33,13 +33,28 @@ export default function Navbar() {
 
         {/* Right: Social icons */}
         <div className="flex gap-4 text-xl">
-          <a href={socialLinks.linkedin} target="_blank" className="hover:text-cyan-400 transition">
+          <a
+            href={socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition-transform transform hover:scale-110"
+          >
             <FaLinkedin />
           </a>
-          <a href={socialLinks.github} target="_blank" className="hover:text-cyan-400 transition">
+          <a
+            href={socialLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition-transform transform hover:scale-110"
+          >
             <FaGithub />
           </a>
-          <a href={socialLinks.resume} target="_blank" className="hover:text-cyan-400 transition">
+          <a
+            href={socialLinks.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition-transform transform hover:scale-110"
+          >
             <FaFileAlt />
           </a>
         </div>
