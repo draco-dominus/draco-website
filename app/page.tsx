@@ -8,7 +8,7 @@ import AIDracoChat from "./components/DracoGPT";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="pt-24 px-6">
       <Navbar />
       <About />
       <Projects />

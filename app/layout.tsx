@@ -1,14 +1,19 @@
-export const metadata = {
+import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Draco Dominus",
-  description: "Portfolio website for Draco Dominus",
+  description: "Portfolio of Draco Dominus — AI-powered product builder.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="bg-neutral-950 text-neutral-100 font-sans">
-        {children}
-      </body>
+      <body className="bg-black text-white">{children}</body>
     </html>
   );
 }

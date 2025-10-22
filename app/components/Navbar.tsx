@@ -1,63 +1,60 @@
 "use client";
+
 import { FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 
 export default function Navbar() {
-  const links = ["about", "projects", "experience", "contact"];
-
-  const socialLinks = {
-    linkedin: "https://linkedin.com/in/draco-dominus",
-    github: "https://github.com/dracodominus",
-    resume: "/resume.pdf",
-  };
+  const links = ["About", "Projects", "Experience", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 text-white">
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-gray-200/50 shadow-sm">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-8 py-4">
+
         {/* Left: Name / Logo */}
-        <div className="text-lg font-semibold tracking-tight text-white hover:text-cyan-400 transition-colors">
+        <div className="text-lg font-semibold text-gray-800 tracking-tight hover:text-[#007aff] cursor-pointer transition-colors duration-300">
           Draco Dominus
         </div>
 
-        {/* Center: Nav links */}
-        <div className="hidden md:flex gap-8 text-sm">
+        {/* Center: Nav Links */}
+        <div className="hidden md:flex gap-10 text-[15px] font-medium text-gray-600">
           {links.map((link) => (
             <a
               key={link}
-              href={`#${link}`}
-              className="uppercase tracking-wide hover:text-cyan-400 transition-colors duration-300"
+              href={`#${link.toLowerCase()}`}
+              className="hover:text-[#007aff] transition-colors duration-300"
             >
               {link}
             </a>
           ))}
         </div>
 
-        {/* Right: Social icons */}
-        <div className="flex gap-4 text-xl">
+        {/* Right: Social Icons */}
+        <div className="flex items-center gap-6 text-xl text-gray-600">
           <a
-            href={socialLinks.linkedin}
+            href="https://www.linkedin.com/in/draco-dominus/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition-transform transform hover:scale-110"
+            className="hover:text-[#007aff] transition-transform hover:scale-110"
           >
-            <FaLinkedin />
+            <FaLinkedin size={20} />
           </a>
           <a
-            href={socialLinks.github}
+            href="https://github.com/dracodominus"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition-transform transform hover:scale-110"
+            className="hover:text-[#007aff] transition-transform hover:scale-110"
           >
-            <FaGithub />
+            <FaGithub size={20} />
           </a>
           <a
-            href={socialLinks.resume}
+            href="/Draco_Dominus_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition-transform transform hover:scale-110"
+            className="hover:text-[#007aff] transition-transform hover:scale-110"
           >
-            <FaFileAlt />
+            <FaFileAlt size={20} />
           </a>
         </div>
+
       </div>
     </nav>
   );
